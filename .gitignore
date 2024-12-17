@@ -1,0 +1,26 @@
+# .NET Core/.NET 5/.NET 6
+bin/
+obj/
+out/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code
+.vscode/
+
+# Ignore Visual Studio files
+.vs/
+*.user
+*.suo
+*.sln.docstates
+
+
+# Publish directory
+publish/
+wwwroot/
+
+# Logs and temp
+*.log
+temp/
