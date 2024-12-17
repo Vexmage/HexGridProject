@@ -16,3 +16,13 @@ This is a Blazor WebAssembly project that renders a staggered flat-top hex grid.
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/HexGridProject.git
+
+## Navigate to the project directory:
+
+cd HexGridProject
+
+## Run the project:
+
+dotnet run
+
+Open https://localhost:5001 in your browser.
