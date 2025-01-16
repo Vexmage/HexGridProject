@@ -4,20 +4,24 @@ namespace HexGridProject.HexGrid
 {
     public static class HexMath
     {
-        // Function to calculate the pixel position of a hex tile
-        public static (float x, float y) GetHexPosition(int q, int r, float size)
+        /// <summary>
+        /// Calculate the pixel position of a hex in doubled coordinates.
+        /// </summary>
+        /// <param name="col">Doubled column of the hex.</param>
+        /// <param name="row">Row of the hex.</param>
+        /// <param name="size">Size (radius) of the hex.</param>
+        /// <returns>Pixel coordinates (x, y).</returns>
+        public static (float x, float y) GetDoubledHexPosition(int col, int row, float size)
         {
-            float width = size * (float)Math.Sqrt(3); // Horizontal distance
+            float width = size * (float)Math.Sqrt(3); // Horizontal spacing
             float height = size * 1.5f;               // Vertical spacing for flat-top hexes
 
-
-            // Apply horizontal offset for even rows
-            float x = width * q + (r % 2) * (width / 2);
-            float y = height * r;
+            // Correct doubled coordinate calculation
+            float x = col * (width / 2);  // Adjust for doubled-column layout
+            float y = row * height;
 
             return (x, y);
         }
-
 
 
     }
